@@ -1,0 +1,245 @@
+/************FON PYATNO****************/
+.wrapper {
+	position: relative;	 
+}
+
+section {
+	position: relative;
+
+}
+
+.product .production-item {
+	background-color: #FFF;
+}
+
+.product .product-carousel .product-item .item {
+	background-color: #FFF;
+}
+
+.strength .strength-item .item {
+	background-color: #FFF;
+}
+
+.questions .list-group {
+	background-color: #FFF;
+}
+
+.answer .card {
+	background-color: transparent;
+}
+
+footer .company-news .news {
+	background-color: #FFF;
+}
+
+.pyatno.page-title {
+	position: unset;
+}
+
+.pyatno.page-title:before {
+	top: 297px;
+}
+.pyatno.page-title:after {
+	top: 227px;
+}
+
+
+.index.pyatno-1 {
+	position: absolute;
+	z-index: -3;
+	top: 1060px;
+	right: -500px;
+}
+.index.pyatno-2 {
+	position: absolute;
+	z-index: -3;
+	top: 2350px;
+	left: -400px;
+}
+
+.index.pyatno-3 {
+	position: absolute;
+	z-index: -3;
+	top: 3500px;
+	right: -300px;
+}
+
+.index.pyatno-4 {
+	position: absolute;
+	z-index: -3;
+	top: 4600px;
+	left: -300px;
+}
+.index.pyatno-4 img {
+	width: 1700px;
+}
+
+.pyatno-5{
+	position: absolute;
+	z-index: -3;
+	bottom: -200px;
+	right: -50px;
+}
+
+
+
+
+.about.pyatno-1 {
+	position: absolute;
+	z-index: -3;
+	top: 16%;
+	right: -600px;
+}
+.about.pyatno-2 {
+	position: absolute;
+	z-index: -3;
+	top: 35%;
+	left: -400px;
+}
+
+
+
+.calc.pyatno-1 {
+	position: absolute;
+	z-index: -3;
+	top: 15%;
+	right: -600px;
+}
+.calc.pyatno-2 {
+	position: absolute;
+	z-index: -3;
+	top: 35%;
+	left: -400px;
+}
+
+
+
+.card.pyatno-1 {
+	position: absolute;
+	z-index: -3;
+	top: 13%;
+	right: -600px;
+	border: none;
+}
+.card.pyatno-2 {
+	position: absolute;
+	z-index: -3;
+	top: 40%;
+	left: -400px;
+	border:none;
+}
+
+
+.card-description .strength-item .item {
+	background-color: transparent;
+}
+.card-description .strength-item .item:hover {
+	background-color: #FFF;
+}
+
+
+
+
+.catalog.pyatno-1 {
+	position: absolute;
+	z-index: -3;
+	top: 18%;
+	right: -600px;
+	border: none;
+}
+.catalog.pyatno-2 {
+	position: absolute;
+	z-index: -3;
+	top: 58%;
+	left: -400px;
+	border:none;
+}
+
+.catalog .catalog-items .item {
+	background-color: #FFF;
+}
+
+.catalog .sort-by-radio .item .card-body{
+	background-color: transparent;
+}
+.catalog .sort-by-radio .item button{
+	background-color: transparent;
+}
+
+
+
+
+.filials.pyatno-1 {
+	position: absolute;
+	z-index: -3;
+	top: 15%;
+	right: -600px;
+	border: none;
+}
+
+
+
+.kontakty.pyatno-1 {
+	position: absolute;
+	z-index: -3;
+	top: 3%;
+	right: -600px;
+	border: none;
+}
+
+.contacts .city-item {
+	background-color: #FFF;
+}
+
+
+
+
+
+
+.news.pyatno-1 {
+	position: absolute;
+	z-index: -3;
+	top: 20%;
+	right: -600px;
+	border: none;
+}
+.news.pyatno-2 {
+	position: absolute;
+	z-index: -3;
+	top: 50%;
+	left: -400px;
+	border:none;
+}
+
+
+.news .catalog-items .item {
+	background-color: #FFF;
+}
+
+.news .sort-by-radio .item .card-body{
+	background-color: transparent;
+}
+.news .sort-by-radio .item button{
+	background-color: transparent;
+}
+
+
+.statya.pyatno-1 {
+	position: absolute;
+	z-index: -3;
+	top: 6%;
+	right: -600px;
+	border: none;
+}
+.statya.pyatno-2 {
+	position: absolute;
+	z-index: -3;
+	top: 48%;
+	left: -400px;
+	border:none;
+}
+
+
+
+
+/**********************/

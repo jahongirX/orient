@@ -1,0 +1,174 @@
+.jumbotron {
+	margin-bottom: 0;
+}
+.page-header-block a {
+	float: right;
+	margin-left: 10px;
+}
+
+.page-header-block h2 {
+	margin: 0;
+	float: left;
+	line-height: 30px;
+}
+
+.panel .panel-body.row-default > .row {
+  	margin-left: -15px;
+  	margin-right: -15px;
+}
+
+.nav-tabs-simple:after {
+	border: 0
+}
+
+.invisible {
+	display: none
+}
+
+.fileinput-box label {
+	background: #6D5CAE;
+	color: #fff !important;
+	padding: 10px 25px;
+	margin: auto;
+  	display: block;
+  	width: 100%;
+  	text-align: center;
+  	margin-top: 20px;
+}
+
+.fileinput {
+	display: none !important;
+}
+
+.image_preview {
+	border: 1px solid rgba(0, 0, 0, 0.07);
+	display: block;
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+  	margin: auto;
+  	margin-top: 20px;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.postImage {
+	cursor: pointer;
+    margin: auto;
+}
+
+.clipboard {
+	cursor: pointer;
+}
+
+.clipboard label,
+.clipboard label.fade {
+	opacity: 1;
+	cursor: pointer;
+}
+
+.clipboard .input-group-addon input {
+	color: rgba(98, 98, 98, 0.47);
+	font-size: 14px;
+	padding-left: 15px;
+}
+
+.form-group label {
+	cursor: pointer;
+}
+
+.select2-container--krajee .select2-selection {
+	background-image: none;
+	border-radius: 2px;
+	border: 1px solid rgba(0, 0, 0, 0.07);
+	transition: border 0.2s linear 0s;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.select2-container--krajee .select2-selection--single .select2-selection__arrow {
+	right: 0;
+	left: auto;
+	background: transparent;
+	border-left: 0;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.select2-container--krajee .select2-selection--single .select2-selection__arrow b {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: url(../plugins/bootstrap-select2/select2.png) no-repeat 0 1px;
+	border: 0;
+	position: relative;
+	top: 0;
+	left: 0;
+	margin: 0;
+}
+
+.select2-container--krajee .select2-search--dropdown .select2-search__field {
+	background: #ffffff !important;
+	vertical-align: baseline;
+	line-height: 28px;
+	border-radius: 2px;
+	border: none;
+	font-size: 12px;
+	border: 1px solid rgba(0, 0, 0, 0.07);
+	color: #555555;
+	outline: 0;
+	padding: 4px;
+	width: 100%;
+	box-sizing: border-box;
+	height: auto !important;
+	min-height: 26px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.tab-content {
+	margin-bottom: 25px;
+}
+
+.pagination {
+	float: right;
+	margin: 0;
+}
+
+.pagination>li>a, .pagination>li>span {
+	border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+	background-color: #48b0f7;
+	border-color: #48b0f7;
+}
+
+.index-footer {
+	margin-bottom: 20px;
+}
+
+.brand {
+	font-size: 35px;
+	letter-spacing: 10px;
+	font-weight: 300;
+}
+
+.login-container .brand {
+}
+
+.bg-pic img {
+	width: auto;
+	height: 100%;
+}
