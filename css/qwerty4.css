@@ -1,0 +1,332 @@
+/***************PRODUCT CARD***************/
+
+.card-title {
+	padding: 125px 0;
+}
+
+
+.breadcrumb-section .breadcrumb{
+	background-color: transparent !important;
+}
+
+.breadcrumb-section .breadcrumb li:before {
+	display: none !important;
+}
+
+.breadcrumb-section .breadcrumb li i{
+	margin-right: 15px;
+	color: #000 !important;
+}
+
+.breadcrumb-section .breadcrumb li a{
+	margin-right: 15px;
+	color: #000 !important;
+	text-decoration: underline;
+}
+
+.breadcrumb-section .breadcrumb li.active ,
+.breadcrumb-section .breadcrumb li.active i{
+	text-decoration: none;
+	color: #35b3fe !important;
+}
+
+
+.product-item-carousel .carousel {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.product-item-carousel .carousel .owl-carousel {
+	margin-right: 10px;
+	width: 540px;
+}
+
+.product-item-carousel .carousel .owl-carousel .owl-item {
+	padding: 10px 15px 10px 10px;
+} 
+
+.product-item-carousel .carousel .owl-carousel .item {
+	height: 550px;
+
+	cursor: pointer;
+	position: relative;
+
+	display: flex;
+    align-items: center;
+    padding: 40px;
+
+	box-shadow: 0px 0px 13px -4px rgba(166,159,166,1);
+}
+
+.product-item-carousel .carousel .owl-carousel .item .carousel-zoomer {
+	width: 55px;
+	height: 55px;
+	position: absolute;
+	top: 20px;
+	right: 20px;	
+}
+
+/************MGNIFIC POP***********/
+
+/* padding-bottom and top for image */
+.mfp-no-margins img.mfp-img {
+	padding: 0;
+}
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after {
+	top: 0;
+	bottom: 0;
+}
+/* padding for main container */
+.mfp-no-margins .mfp-container {
+	padding: 0;
+}
+
+
+/* 
+
+for zoom animation 
+uncomment this part if you haven't added this code anywhere else
+
+*/
+
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+	opacity: 0;
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: all 0.5s ease-out; 
+	-moz-transition: all 0.5s ease-out; 
+	-o-transition: all 0.5s ease-out; 
+	transition: all 0.5s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+		opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+		opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+
+
+/************MGNIFIC POP***********/
+
+
+
+
+.product-item-carousel .carousel .owl-carousel .owl-nav {
+	height: 0;
+}
+
+.product-item-carousel .carousel .owl-carousel .owl-nav .owl-prev {
+	position: absolute;
+	top: 0px;
+	right: -70px;
+}
+
+.product-item-carousel .carousel .owl-carousel .owl-nav .owl-next {
+	position: absolute;
+	bottom: 0px;
+	right: -70px;
+}
+
+
+.product-item-carousel .carousel .owl-carousel .owl-nav .owl-prev:focus,
+.product-item-carousel .carousel .owl-carousel .owl-nav .owl-next:focus {
+	border: none;
+	outline: none;
+	box-shadow: none;
+}
+
+
+
+.product-item-carousel .carousel .owl-thumbs {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.product-item-carousel .carousel .owl-thumb-item {
+	cursor: pointer;
+	width: 110px;
+	height: 100px;
+	padding: 10px;
+	border: none;
+	outline: none;
+	box-shadow: 0px 0px 13px -4px rgba(166,159,166,1);
+	display: flex;
+	align-items: center;
+	background-color: transparent;
+	opacity: 1;
+
+	margin: 15px 0;
+
+	transition: all .3s ease;
+}
+
+.product-item-carousel .carousel .owl-thumb-item:hover {
+	opacity: .6;
+	transition: all .3s ease;
+	border:1px solid #6db1fb;
+}
+
+
+.product-item-carousel .carousel .owl-thumb-item img{
+	width: 100%;
+	
+}
+
+
+.product-item-carousel .carousel .owl-thumb-item.active {
+	opacity: .6;
+	border: 1px solid #35b3fe;
+
+}
+
+
+.product-card-info {
+	padding-left: 40px;
+}
+
+.product-card-info .product-item-info {
+	margin-bottom: 50px;
+}
+
+.product-card-info .product-item-info h4{
+	font-family: MuseoSansCyrl-500;
+	font-size: 22px;	
+}
+
+.product-card-info .product-item-info h5{
+	font-family: MuseoSansCyrl-300;
+	font-size: 16px;	
+}
+
+.product-card-info .product-item-xarakter {
+	margin-bottom: 80px;
+}
+
+.product-card-info .product-item-xarakter p{
+	font-family: MuseoSansCyrl-300;
+	font-size: 16px;	
+	border-bottom: 1px solid #e4eaed;
+	padding-bottom: 15px;
+	margin-bottom: 10px;
+}
+
+.product-card-info .product-item-xarakter p span {
+	font-family: MuseoSansCyrl-500;
+}
+
+
+.product-card-info .product-item-xarakter .xarakter-header{
+	font-family: MuseoSansCyrl-500;
+	font-size: 18px;	
+	color: #4a2598;
+}
+
+
+.product-card-info .addtocart p{
+	font-family: MuseoSansCyrl-300;
+	font-size: 16px;	
+	margin-bottom: 0;
+}
+
+.product-card-info .addtocart h3{
+	font-family: MuseoSansCyrl-700;
+	color: #4a2598;
+	font-size: 36px;
+	margin-bottom: 20px;	
+}
+
+.product-card-info .addtocart button {
+    height: 50px;
+    background-color: #4a2598;
+    padding: 10px 25px;
+    color: #FFF;
+    border-radius: 25px;
+    border-color: transparent;
+    cursor: pointer;
+    box-shadow: 0px 0px 18px -4px rgba(166,159,166,1);
+    transition: all .3s ease;
+}
+
+.product-card-info .addtocart button:hover {
+    transition: all .3s ease;
+    box-shadow: 0px 0px 18px -4px rgba(166,159,166,1), 0px 0px 18px -4px rgba(166,159,166,1);
+}
+
+
+
+.description .description-title {
+	position: relative;
+	font-family: MuseoSansCyrl-500;
+	font-size: 24px;
+	color: #4a2598;
+	padding: 30px 0 15px 0;
+	border-bottom: 1px solid #e4eaed;
+	margin-bottom: 30px;
+}
+.description .description-title p{
+	margin-bottom: 0;
+}
+
+.description .description-title:after {
+	content: '';
+	position: absolute;
+	bottom: -3px;
+	width: 100%;
+	height: 6px;
+	background-image: url('../images/description-after.png');
+	background-repeat: no-repeat;
+}
+
+.description .description-text p{
+	font-size: 16px;
+	font-family: MuseoSansCyrl-300;
+}
+
+.description .description-text p:not(:last-child){
+	margin-bottom: 25px;
+}
+
+.description .description-text p:last-child {
+	margin-bottom: 0;
+}
+
+
+
+.card-description .strength-item .item{
+     border: 1px solid transparent; 
+     box-shadow: unset; 
+     border-radius: unset; 
+    transition: all .3s ease;
+
+}
+
+.card-description .strength-item .item:hover {
+	border: 1px solid #f7f7f7;
+     box-shadow: 0px 0px 13px -4px rgba(166,159,166,1); 
+     border-radius: 40px;
+}
+
+.card-description .strength-item .item p{
+	font-size: 18px;
+	font-family: MuseoSansCyrl-500;
+}
+
+
+
+
+.product.showing {
+	padding: 10px 0 0 0 ;
+}
+
+/**************************
+
