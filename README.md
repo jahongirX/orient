@@ -1,2 +1,0 @@
-# orient
-Orient Tech Machine
