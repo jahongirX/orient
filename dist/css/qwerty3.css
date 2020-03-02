@@ -1,0 +1,44 @@
+/***************FILIALS***************/
+
+.filials-title {
+	padding: 125px 0;
+}
+
+.filials-map {
+	padding: 50px 0;
+}
+
+.filials-map .titler:before{
+	left: 10px;
+	top: -10px;
+}
+
+.map-switcher .list-group {
+	flex-direction: row;
+	padding: 5px;
+	border: 2px solid #d6d6d6;
+	background-color: #edeaf5;
+	border-radius: 50px;
+} 
+
+.map-switcher .list-group a{
+	padding:10px 0;
+	color: #000;
+	border-radius: 50px;
+	background-color: transparent;
+	border: none;
+}
+
+.map-switcher .list-group a.active {
+	background-color: #7140fd;
+	color: #FFF;
+}
+.map-switcher .list-group a p {
+	margin-bottom: 0;
+}
+
+
+
+
+/***************************/
+
