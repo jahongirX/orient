@@ -650,7 +650,7 @@ class SiteController extends Controller
             if($model->save()){
                 Yii::$app->session->setFlash('success', 'Murojaatingiz qabul qilindi!');
                 $name = $model->name;
-                $email = $model->email;
+//                $email = $model->email;
                 $body = $model->body;
                 $phone = $model->phone;
             

@@ -494,6 +494,11 @@ section {
 
 }
 
+.product-carousel .item button a {
+	text-decoration: none;
+	color: #FFF;
+}
+
 .product-carousel .item button:hover {
 	transition: all .3s ease;
 	box-shadow: 0px 0px 18px -4px rgba(166,159,166,1), 0px 0px 18px -4px rgba(166,159,166,1) ;

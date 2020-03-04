@@ -11,7 +11,7 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log','userCounter'],
     'controllerNamespace' => 'frontend\controllers',
-    'language' => 'UZ-uz',
+    'language' => 'Ru-ru',
     'components' => [
         'httpclient' => [
             'class' =>'understeam\httpclient\Client',

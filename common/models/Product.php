@@ -21,10 +21,10 @@ class Product extends ActiveRecord
     public function rules()
     {
         return [
-            [['status', 'price','category_id'], 'integer'],
+            [['status','category_id'], 'integer'],
             [['name'], 'required'],
-            [['name'], 'string', 'max' => 100],
-            [['text'], 'string'],
+            [['name','price'], 'string', 'max' => 100],
+            [['text','articul','model','depth','butt','color'], 'string'],
             [['description'], 'string', 'max' => 300],
             [['image'], 'string', 'max' => 255],
         ];
@@ -44,6 +44,12 @@ class Product extends ActiveRecord
             'image' => Yii::t('main', 'Image'),
             'price' => Yii::t('main', 'Price'),
             'status' => Yii::t('main', 'Status'),
+            'articul' => Yii::t('main', 'Articul'),
+            'model' => Yii::t('main', 'Model'),
+            'depth' => Yii::t('main', 'Depth'),
+            'butt' => Yii::t('main', 'Butt'),
+            'color' => Yii::t('main', 'Color'),
+            
         ];
     }
 

@@ -4,122 +4,133 @@ use common\components\StaticFunctions;
 use yii\widgets\ActiveForm;
 use yii\helpers\Html;
 
-$this->title = Yii::t('main', 'contacts');
+$this->title = \common\components\StaticFunctions::getSettings('title') . " - " . Yii::t('main', 'contacts');
 
 
 ?>
 
-<div class="inner-page-banner-area" style="background-image: url('/img/featured/back.jpg');">
-    <div class="container">
-        <div class="pagination-area">
-            <h1><?=Yii::t('main', 'contacts')?></h1>
-            <ul>
-                <li><a href="<?=\yii\helpers\Url::home()?>"><?=Yii::t('main','home')?></a> -</li>
-            </ul>
-        </div>
-    </div>
-</div>
-
 <section class="contacts">
-
-<div class="news-details-page-area">
     <div class="container">
+        <div class="row">
+            <?php if(!empty($_SESSION['success'])):?>
+                <div class="col-lg-12 col-md-12 alert alert-success" role="alert"><?=$_SESSION['success']?></div>
+            <?php endif;?>
+            <?php if (!empty($_SESSION['succes']))?>
+            <div class="col-md-12">
+                <h3 class="text-center titler"><?=Yii::t('main','contactCompany')?></h3>
+            </div>
+        </div>
+
         <div class="row">
 
             <div class="col-md-6">
 
-                <h2 class="contact-page-title"><?= $this->title ?></h2>
+                <p class="city"><span><?=Yii::t('main','town')?></span></p>
 
-
-                <div class="contact-page-info">
-
-                    <?php if(!empty($_SESSION['success'])):?>
-                        <div class="alert alert-success alert-dismissible" role="alert">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <?=Yii::t('main','success')?>
-                        </div>
-                    <?php endif;?>
-                    <div class="address"> <i class="fa fa-map-marker"></i>  <?=Yii::t('main','Manzil')?> : <?= StaticFunctions::getSettings('address') ?></div>
-                    <div class="phone"><i class="fa fa-phone"></i> <?=Yii::t('main','Telefon')?> : <?= StaticFunctions::getSettings('phone') ?></div>
-                    <div class="email"><i class="fa fa-envelope-o"></i> <?=Yii::t('main','E-mail')?> : <?= StaticFunctions::getSettings('email') ?></div>
-
-
+                <div class="city-item">
+                    <div class="organizatsiya"><?=Yii::t('main','organization')?> </div>
+                    <div class="organizatsiya-name"><?=Yii::t('main','companyFactory')?></div>
+                    <div class="addre7ss">
+                        <img src="/images/c-place-marker.png" alt="">
+                        <h5><?=\common\models\Settings::findOne('адрес')->getLang('val')?></h5>
+                    </div>
+                    <div class="work-time">
+                        <img src="/images/c-time-marker.png" alt="">
+                        <h5><?=\common\models\Settings::findOne('Режим-время')->getLang('val')?></h5>
+                    </div>
+                    <div class="phone">
+                        <img src="/images/phone-marker.png" alt="">
+                        <h5><?=\common\models\Settings::findOne('телефон')->getLang('val')?></h5>
+                    </div>
+                    <div class="email">
+                        <img src="/images/email-marker.png" alt="">
+                        <a href="#"><?=\common\models\Settings::findOne('эмаил')->getLang('val')?></a>
+                    </div>
                 </div>
 
-                <div class="contact-page-form">
+            </div>
 
-                    <div class="row">
+            <div class="col-md-6">
 
-                        <?php $form = ActiveForm::begin([
-                            'enableClientValidation' => true,
-                            'options'=>[
-                                'id' => 'contact-form'
-                            ]
-                        ]); ?>
+                <p class="city"><span><?=Yii::t('main','town2')?></span></p>
 
-                            <div class="col-md-12">
+                <div class="city-item">
+                    <div class="organizatsiya"><?=Yii::t('main','organization')?></div>
+                    <div class="organizatsiya-name"><?=Yii::t('main','companyFactory')?></div>
+                    <div class="address">
+                        <img src="/images/c-place-marker.png" alt="">
+                        <h5><?=\common\models\Settings::findOne('адрес')->getLang('val')?></h5>
+                    </div>
+                    <div class="work-time">
+                        <img src="/images/c-time-marker.png" alt="">
+                        <h5><?=\common\models\Settings::findOne('Режим-время')->getLang('val')?></h5>
+                    </div>
+                    <div class="phone">
+                        <img src="/images/phone-marker.png" alt="">
+                        <h5><?=\common\models\Settings::findOne('телефон')->getLang('val')?></h5>
+                    </div>
+                    <div class="email">
+                        <img src="/images/email-marker.png" alt="">
+                        <a href="#"><?=\common\models\Settings::findOne('эмаил')->getLang('val')?></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="contacts-form">
+
+    <div class="map">
+        <img src="/images/map.png" alt="map">
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <?php $form = ActiveForm::begin([
+                'enableClientValidation' => true,
+                'options'=>[
+                    'id' => 'contact-form'
+                ]
+            ]); ?>
+                <div class="col-md-7 offset-md-5 col-12">
+                    <form action="">
+                        <div class="form">
+                            <h3><?=Yii::t('main','вопросы')?></h3>
+                            <h5><?=Yii::t('main','ответим')?></h5>
+                            <div class="main-input">
 
                                 <?= $form->field($model, 'name',[
                                     'template' => "{label}{input}"
                                 ])->label(Yii::t('main','name')) ?>
 
-                            </div>
-
-                            <div class="col-md-12">
-
-                                <?= $form->field($model, 'email',[
-                                    'template' => "{label}{input}"
-                                ])->label(Yii::t('main','email')) ?>
-
-                            </div>
-
-                            <div class="col-md-12">
-
                                 <?= $form->field($model, 'phone',[
                                     'template' => "{label}{input}"
-                                ])->label(Yii::t('main','phone')) ?>
+                                ])->label(Yii::t('main','телефон')) ?>
 
                             </div>
 
-                            <div class="col-md-12">
+                            <?= $form->field($model, 'body',[
+                                'template' => "{label}{input}"
+                            ])->label(Yii::t('main','body'))->textarea() ?>
 
-                                <?= $form->field($model, 'body',[
-                                    'template' => "{label}{input}"
-                                ])->textarea()->label(Yii::t('main','body')) ?>
-
-                            </div>
-
-                            <div class="col-md-12">
-                                <?= $form->field($model, 'captcha')->widget(\yii\captcha\Captcha::classname(), [
-                                    // configure additional widget properties here
-                                ]) ?>
-                            </div>
-
-                            <div class="col-md-12">
-
-                                <?= Html::submitButton(Yii::t('main','send'), ['class' => 'btn btn__yellow-2', 'id' => 'submit-btn']) ?>
-
-                            </div>
-
-                        <?php ActiveForm::end(); ?>
-
-                    </div>
-
+    <!--                        <button type="submit" class="more btn" >--><?//=Yii::t('main','sms')?><!--</button>-->
+                            <?= Html::submitButton('Оставить сообщение', ['class' => 'more btn', 'id' => 'submit-btn']) ?>
+                        </div>
+                    </form>
                 </div>
-
-            </div>
-
-            <div class="contacts-map col-md-6">
-                <div class="row">
-                    <div class="map-block col-md-12">
-                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Acefd5aa985dbf03fbe2d62382c10a5333c5f3c4376f356965818c1c2dc49f332&amp;source=constructor" width="100%" height="500" frameborder="0"></iframe>
-                    </div>
-                </div>
-            </div>
-
+            <?php ActiveForm::end(); ?>
         </div>
-
     </div>
-    
 </section>
+
+
+<div class="kontakty pyatno-1">
+    <img src="/images/pyatno-1.png" alt="pyatno" >
+</div>
 

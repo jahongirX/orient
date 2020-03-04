@@ -53,6 +53,18 @@ $this->params['breadcrumbs']['title'] = $this->title;
 
                             <?= $form->field($model,'text')->textarea(['row'=>6])?>
 
+                            <?= $form->field($model, 'articul')->label('articul') ?>
+
+                            <?= $form->field($model, 'model')->label('model') ?>
+
+                            <?= $form->field($model, 'depth')->label('depth') ?>
+
+                            <?= $form->field($model, 'butt')->label('butt') ?>
+
+                            <?= $form->field($model, 'color')->label('color') ?>
+
+                            <?= $form->field($model, 'price')->label('price') ?>
+
                         </div>
 
                     </div>
