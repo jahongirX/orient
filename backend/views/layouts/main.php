@@ -54,12 +54,10 @@ AppAsset::register($this);
 //                        ['label' => Yii::t('main', 'Partners'), 'url' => '/partner/index', 'icon' => 'PA'],
 //                        ['label' => Yii::t('main', 'Books'), 'url' => '/books/index', 'icon' => 'BK'],
                     ]];
-//                    $menuItems[] = ['label' => Yii::t('main', 'Services'), 'icon' => 'pg-settings_small_1', 'items' => [
-//                        ['label' => Yii::t('main', 'Services'), 'url' => '/services/index', 'icon' => 'Se'],
-//                        ['label' => Yii::t('main', 'Service Categories'), 'url' => '/service-category/index', 'icon' => 'SK'],
-//                        ['label' => Yii::t('main', 'Service Requests'), 'url' => '/service-request/index', 'icon' => 'SR'],
-//                        ['label' => Yii::t('main', 'Request Subjects'), 'url' => '/service-request-subject/index', 'icon' => 'SS'],
-//                    ]];
+                    $menuItems[] = ['label' => Yii::t('main', 'Product'), 'icon' => 'pg-settings_small_1', 'items' => [
+                        ['label' => Yii::t('main', 'Product'), 'url' => '/product/index', 'icon' => 'Se'],
+                        ['label' => Yii::t('main', 'Product Categories'), 'url' => '/product-category/index', 'icon' => 'SK'],
+                    ]];
 //                    $menuItems[] = ['label' => Yii::t('main', 'Testimonials'), 'url' => '/testimonials/index', 'icon' => 'pg-comment'];
                     $menuItems[] = ['label' => Yii::t('main', 'Contacts'), 'icon' => 'pg-layouts', 'items' => [
                         ['label' => Yii::t('main', 'Contacts'), 'url' => '/contact/index', 'icon' => 'Ст'],

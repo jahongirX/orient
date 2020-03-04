@@ -29,7 +29,7 @@ function renderFooterMenu($id)
             <div class="row">
                 <div class="col-md-5">
                     <div class="footer-logo">
-                        <a href="#"><img src="images/footer-logo.png" alt="Logo"></a>
+                        <a href="#"><img src="/images/footer-logo.png" alt="Logo"></a>
                     </div>
                     <div class="company-direction">
                         Изготовление емкостного оборудования и металлоконструкций. <br>
@@ -43,13 +43,13 @@ function renderFooterMenu($id)
                             </div>
                             <div class="phone-title">
                                 <a href="#">
-                                    <img src="images/phone-marker.png" alt="Place-Marker">
+                                    <img src="/images/phone-marker.png" alt="Place-Marker">
                                     <p>Бесплатный звонок</p>
                                 </a>
                             </div>
                             <div class="email-info">
                                 <a href="#">
-                                    <img src="images/email-marker.png" alt="Place-Marker">
+                                    <img src="/images/email-marker.png" alt="Place-Marker">
                                     <p>info@otm.ru</p>
                                 </a>
                             </div>
@@ -98,7 +98,7 @@ function renderFooterMenu($id)
                             <div class="news-url">
                                 <a href="#">
                                     <p>Читать статью</p>
-                                    <img src="images/news-url-icon.png" alt="news-url">
+                                    <img src="/images/news-url-icon.png" alt="news-url">
                                 </a>
                             </div>
                         </div>
@@ -117,7 +117,7 @@ function renderFooterMenu($id)
                             <div class="news-url">
                                 <a href="#">
                                     <p>Читать статью</p>
-                                    <img src="images/news-url-icon.png" alt="news-url">
+                                    <img src="/images/news-url-icon.png" alt="news-url">
                                 </a>
                             </div>
                         </div>
@@ -132,13 +132,13 @@ function renderFooterMenu($id)
                                 </div>
                                 <div class="phone-title">
                                     <a href="#">
-                                        <img src="images/phone-marker.png" alt="Place-Marker">
+                                        <img src="/images/phone-marker.png" alt="Place-Marker">
                                         <p>Бесплатный звонок</p>
                                     </a>
                                 </div>
                                 <div class="email-info">
                                     <a href="#">
-                                        <img src="images/email-marker.png" alt="Place-Marker">
+                                        <img src="/images/email-marker.png" alt="Place-Marker">
                                         <p>info@otm.ru</p>
                                     </a>
                                 </div>

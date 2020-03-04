@@ -37,7 +37,7 @@ class NewsController extends Controller {
         {
             if(Yii::$app->language == Yii::$app->params['main_language'])
             {
-                $models = News::find()->where( 'status=1 AND category=' . $id )->orderBy(['id' => SORT_DESC]);
+                $models = News::find()->where(['status' => 1,'category' => $id ])->orderBy(['id' => SORT_DESC]);
 
             } else {
 
@@ -70,7 +70,7 @@ class NewsController extends Controller {
 
         if(Yii::$app->language == Yii::$app->params['main_language'])
         {
-            $models = News::find()->where('status=1')->orderBy(['event_date' => SORT_DESC]);
+            $models = News::find()->where(['status' => 1])->orderBy(['event_date' => SORT_DESC]);
 
         } else {
 
@@ -82,10 +82,10 @@ class NewsController extends Controller {
 
         $pagination = new \yii\data\Pagination([
             'totalCount' => $models->count(),
-            'pageSize' => 12,
+            'pageSize' => 1,
         ]);
 
-        $models = $models->offset($pagination->offset)->limit(12)->all();
+        $models = $models->offset($pagination->offset)->limit(1)->all();
 
         return $this->render('view-all', [
             'models' => $models,

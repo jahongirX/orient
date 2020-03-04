@@ -9,12 +9,19 @@
 namespace frontend\widgets;
 
 
+use common\models\Product;
+use common\models\ProductCategory;
 use yii\base\Widget;
 
 class SectionProduct extends Widget
 {
     public function run()
     {
-        return $this->render('SectionProduct');
+        $models = ProductCategory::find()->all();
+        $products  = Product::find()->where(['status'=>1])->all();
+        return $this->render('SectionProduct',[
+            'models' => $models,
+            'products' => $products
+        ]);
     }
 }

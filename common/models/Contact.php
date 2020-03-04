@@ -36,11 +36,9 @@ class Contact extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'email', 'body', 'phone'], 'required'],
-            [['subject'], 'integer'],
-            [['email'], 'email'],
-            [['name', 'email','body', 'phone'], 'string'],
-            ['captcha','captcha']
+            [['name', 'phone'], 'required'],
+            [['name', 'body', 'phone'], 'string'],
+//            ['captcha','captcha']
         ];
     }
 
@@ -49,8 +47,8 @@ class Contact extends \yii\db\ActiveRecord
         return [
             'id' => Yii::t('main', 'ID'),
             'name' => Yii::t('main','ФИО'),
-            'email' => Yii::t('main', 'Email'),
-            'subject' => Yii::t('main', 'Subject'),
+//            'email' => Yii::t('main', 'Email'),
+//            'subject' => Yii::t('main', 'Subject'),
             'body' => Yii::t('main', 'Body'),
             'created_date'=>Yii::t('main', 'Created Date'),
         ];

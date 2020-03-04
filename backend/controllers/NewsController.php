@@ -62,7 +62,7 @@ class NewsController extends Controller
 
         if ($model->load(Yii::$app->request->post()))
         {
-            $model->category = implode(",",$_POST['News']['category']);
+            $model->category = implode("," , $_POST['News']['category']);
             $model->creator = Yii::$app->user->id;
 
             if($model->save())
@@ -71,14 +71,14 @@ class NewsController extends Controller
                     $files = UploadedFile::getInstancesByName('file');
                     $this->saveFiles($files,Attach::POST,$model->id);
                 }
-				$image = UploadedFile::getInstance($model, 'main_image');
-				if($image)
-				{
-					$model->main_image = StaticFunctions::saveImage($image, $model->id, 'news');
-				}
-				
-				$model->save();
-				
+                $image = UploadedFile::getInstance($model, 'main_image');
+                if($image)
+                {
+                    $model->main_image = StaticFunctions::saveImage($image, $model->id, 'news');
+                }
+
+                $model->save();
+
                 return $this->redirect(['update', 'id' => $model->id]);
             } else
                 return print_r($model->errors,true);

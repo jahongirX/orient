@@ -87,7 +87,7 @@ function renderMenu2($id){
 
                         <div class="phone-title">
                             <a href="#">
-                                <img src="images/mobilemenu/phone-icon.png" alt="Place-Marker">
+                                <img src="/images/mobilemenu/phone-icon.png" alt="Place-Marker">
                                 <p><?=\common\models\Settings::findOne('Бесплатный-звонок')->getLang('val')?></p>
                             </a>
                         </div>
@@ -96,11 +96,11 @@ function renderMenu2($id){
 
                     <div class="buttons">
                         <a href="#" class="cart" data-toggle="modal" data-target="#mobile-cart-modal">
-                            <img src="images/mobilemenu/cart-icon.png" alt="cart-ico">
+                            <img src="/images/mobilemenu/cart-icon.png" alt="cart-ico">
                         </a>
 
                         <button alt="menu" class="close-button" id="close-menu">
-                            <img src="images/mobilemenu/menu-icon.png" alt="close-ico">
+                            <img src="/images/mobilemenu/menu-icon.png" alt="close-ico">
                         </button>
                     </div>
 
@@ -121,19 +121,19 @@ function renderMenu2($id){
 
                 <div class="social-network">
                     <?php if (\common\models\Settings::findOne('vk')):?>
-                        <a href="<?=\common\models\Settings::findOne('vk')->getLang('url')?>"><img src="images/social-vkontakte.png" alt="Vkontakte"></a>
+                        <a href="<?=\common\models\Settings::findOne('vk')->getLang('url')?>"><img src="/images/social-vkontakte.png" alt="Vkontakte"></a>
                     <?php endif; ?>
                     <?php if (\common\models\Settings::findOne('ok')):?>
-                        <a href="<?=\common\models\Settings::findOne('ok')->getLang('url')?>"><img src="images/social-odnoklassniki.png" alt="Odnoklassniki"></a>
+                        <a href="<?=\common\models\Settings::findOne('ok')->getLang('url')?>"><img src="/images/social-odnoklassniki.png" alt="Odnoklassniki"></a>
                     <?php endif; ?>
                     <?php if (\common\models\Settings::findOne('fb')):?>
-                        <a href="<?=\common\models\Settings::findOne('fb')->getLang('url')?>"><img src="images/social-facebook.png" alt="Facebook"></a>
+                        <a href="<?=\common\models\Settings::findOne('fb')->getLang('url')?>"><img src="/images/social-facebook.png" alt="Facebook"></a>
                     <?php endif; ?>
                     <?php if (\common\models\Settings::findOne('instagram')):?>
-                        <a href="<?=\common\models\Settings::findOne('instagram')->getLang('url')?>"><img src="images/social-instagram.png" alt="Instagram"></a>
+                        <a href="<?=\common\models\Settings::findOne('instagram')->getLang('url')?>"><img src="/images/social-instagram.png" alt="Instagram"></a>
                     <?php endif; ?>
                     <?php if (\common\models\Settings::findOne('twitter')):?>
-                        <a href="<?=\common\models\Settings::findOne('twitter')->getLang('url')?>"><img src="images/social-twitter.png" alt="Twitter"></a>
+                        <a href="<?=\common\models\Settings::findOne('twitter')->getLang('url')?>"><img src="/images/social-twitter.png" alt="Twitter"></a>
                     <?php endif; ?>
                 </div>
 
@@ -145,7 +145,7 @@ function renderMenu2($id){
                         </div>
 
                         <div class="city-info">
-                            <img src="images/place-marker.png" alt="Place-Marker">
+                            <img src="/images/place-marker.png" alt="Place-Marker">
                             <p>Москва</p>
                         </div>
                     </div>
@@ -157,7 +157,7 @@ function renderMenu2($id){
                         </div>
 
                         <div class="work-time-info">
-                            <img src="images/time-marker.png" alt="Time-Marker">
+                            <img src="/images/time-marker.png" alt="Time-Marker">
                             <p><?=\common\models\Settings::findOne('Режим-время')->getLang('val')?></p>
                         </div>
                     </div>
@@ -167,14 +167,14 @@ function renderMenu2($id){
             </div>
 
             <div class="nav-mobile">
-                <a class="navbar-brand" href="#"><img src="images/logo-dark.png" alt="logo-dark"></a>
+                <a class="navbar-brand" href="/"><img src="/images/logo-dark.png" alt="logo-dark"></a>
                 <div class="buttons">
                     <a href="#" class="cart" data-toggle="modal" data-target="#cart-modal">
-                        <img src="images/mobilemenu/mobile-cart-icon.png" alt="cart-ico">
+                        <img src="/images/mobilemenu/mobile-cart-icon.png" alt="cart-ico">
                     </a>
 
                     <button alt="menu" class="menu-btn" id="open-menu">
-                        <img src="images/mobilemenu/mobile-menu-icon.png" alt="Logo">
+                        <img src="/images/mobilemenu/mobile-menu-icon.png" alt="Logo">
                     </button>
                 </div>
 
@@ -185,15 +185,15 @@ function renderMenu2($id){
         <div class="sticky-header">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="#"><img src="images/logo-dark.png" alt="logo-dark"></a>
+                    <a class="navbar-brand" href="/"><img src="/images/logo-dark.png" alt="logo-dark"></a>
 
                     <a href="#" class="cart order-12" data-toggle="modal" data-target="#cart-modal">
-                        <img src="images/cart-icon.png" alt="cart-ico">
+                        <img src="/images/cart-icon.png" alt="cart-ico">
                     </a>
 
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <img src="images/menu-icon.png" alt="Logo">
+                        <img src="/images/menu-icon.png" alt="Logo">
                     </button>
 
 
@@ -220,7 +220,7 @@ function renderMenu2($id){
                     <div class="header-info">
 
                         <div class="logo">
-                            <a href="#"><img src="images/logo.png" alt="Logo"></a>
+                            <a href="#"><img src="/images/logo.png" alt="Logo"></a>
                         </div>
 
                         <div class="city">
@@ -229,7 +229,7 @@ function renderMenu2($id){
                             </div>
 
                             <div class="city-info">
-                                <img src="images/place-marker.png" alt="Place-Marker">
+                                <img src="/images/place-marker.png" alt="Place-Marker">
                                 <p>Москва</p>
                             </div>
                         </div>
@@ -240,26 +240,26 @@ function renderMenu2($id){
                             </div>
 
                             <div class="work-time-info">
-                                <img src="images/time-marker.png" alt="Time-Marker">
+                                <img src="/images/time-marker.png" alt="Time-Marker">
                                 <p><?=\common\models\Settings::findOne('Режим-время')->getLang('val')?></p>
                             </div>
                         </div>
 
                         <div class="social-network">
                             <?php if (\common\models\Settings::findOne('vk')):?>
-                                <a href="<?=\common\models\Settings::findOne('vk')->getLang('url')?>"><img src="images/social-vkontakte.png" alt="Vkontakte"></a>
+                                <a href="<?=\common\models\Settings::findOne('vk')->getLang('url')?>"><img src="/images/social-vkontakte.png" alt="Vkontakte"></a>
                             <?php endif; ?>
                             <?php if (\common\models\Settings::findOne('ok')):?>
-                                <a href="<?=\common\models\Settings::findOne('ok')->getLang('url')?>"><img src="images/social-odnoklassniki.png" alt="Odnoklassniki"></a>
+                                <a href="<?=\common\models\Settings::findOne('ok')->getLang('url')?>"><img src="/images/social-odnoklassniki.png" alt="Odnoklassniki"></a>
                             <?php endif; ?>
                             <?php if (\common\models\Settings::findOne('fb')):?>
-                                <a href="<?=\common\models\Settings::findOne('fb')->getLang('url')?>"><img src="images/social-facebook.png" alt="Facebook"></a>
+                                <a href="<?=\common\models\Settings::findOne('fb')->getLang('url')?>"><img src="/images/social-facebook.png" alt="Facebook"></a>
                             <?php endif; ?>
                             <?php if (\common\models\Settings::findOne('instagram')):?>
-                                <a href="<?=\common\models\Settings::findOne('instagram')->getLang('url')?>"><img src="images/social-instagram.png" alt="Instagram"></a>
+                                <a href="<?=\common\models\Settings::findOne('instagram')->getLang('url')?>"><img src="/images/social-instagram.png" alt="Instagram"></a>
                             <?php endif; ?>
                             <?php if (\common\models\Settings::findOne('twitter')):?>
-                                <a href="<?=\common\models\Settings::findOne('twitter')->getLang('url')?>"><img src="images/social-twitter.png" alt="Twitter"></a>
+                                <a href="<?=\common\models\Settings::findOne('twitter')->getLang('url')?>"><img src="/images/social-twitter.png" alt="Twitter"></a>
                             <?php endif; ?>
                         </div>
 
@@ -270,7 +270,7 @@ function renderMenu2($id){
 
                             <div class="phone-title">
                                 <a href="#">
-                                    <img src="images/phone-marker.png" alt="Place-Marker">
+                                    <img src="/images/phone-marker.png" alt="Place-Marker">
                                     <p><?=\common\models\Settings::findOne('Бесплатный-звонок')->getLang('val')?></p>
                                 </a>
                             </div>
@@ -298,8 +298,8 @@ function renderMenu2($id){
                         </div>
 
                         <div class="shop-icons">
-                            <a href="#" data-toggle="modal" data-target="#cart-modal"><img src="images/cart-icon.png" alt="Cart"></a>
-                            <a href="#" data-toggle="modal" data-target="#order-modal"><img src="images/menu-icon.png" alt="Menu"></a>
+                            <a href="#" data-toggle="modal" data-target="#cart-modal"><img src="/images/cart-icon.png" alt="Cart"></a>
+                            <a href="#" data-toggle="modal" data-target="#order-modal"><img src="/images/menu-icon.png" alt="Menu"></a>
                         </div>
                     </div>
                 </div>
@@ -321,7 +321,7 @@ function renderMenu2($id){
                         </div>
 
                         <div class=" carousel-img">
-                            <img src="images/sisterna1.png" alt="sisterna">
+                            <img src="/images/sisterna1.png" alt="sisterna">
                         </div>
                     </div>
                 </div>
@@ -333,7 +333,7 @@ function renderMenu2($id){
 
         <div class="container">
             <div class="arrow">
-                <a href="#about"><img src="images/link-down.png" alt="link-down"></a>
+                <a href="#about"><img src="/images/link-down.png" alt="link-down"></a>
             </div>
         </div>
 

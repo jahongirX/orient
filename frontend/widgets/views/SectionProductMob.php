@@ -12,17 +12,14 @@
         <div class="row">
 
             <div class="col-md-12">
-                <h3 class="text-center titler">Продукция ОТМ</h3>
+                <h3 class="text-center titler"><?=Yii::t('main','products')?></h3>
             </div>
         </div>
-
 
         <div class="row">
 
             <div class="col-md-12">
                 <div class="accordion" id="accordionExample">
-
-
 
                     <div class="card">
                         <div class="card-header" id="headingOne">
@@ -125,9 +122,6 @@
                         </div>
                     </div>
 
-
-
-
                     <div class="card">
 
                         <div class="card-header" id="headingTwo">
@@ -228,9 +222,6 @@
                         </div>
                     </div>
 
-
-
-
                     <div class="card">
 
                         <div class="card-header" id="headingThree">
@@ -330,9 +321,6 @@
                         </div>
 
                     </div>
-
-
-
 
                     <div class="card">
 
@@ -435,10 +423,6 @@
 
                     </div>
 
-
-
-
-
                     <div class="card">
 
                         <div class="card-header" id="headingFive">
@@ -540,14 +524,11 @@
 
                     </div>
 
-
                 </div>
 
             </div>
 
         </div>
-
-
 
         <div class="row">
             <div class="col-md-12 text-center btnch">

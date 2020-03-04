@@ -2,78 +2,139 @@
 
 use yii\widgets\LinkPager;
 
-$this->title = \common\models\Settings::findOne('title')->getLang('val') . " - " .Yii::t('main', 'all-news');
+$this->title = \common\components\StaticFunctions::getSettings('title') . " - " .Yii::t('main', 'all-news');
 
 ?>
 
-<div class="inner-page-banner-area" style="background-image: url('/img/banner/5.jpg');">
-    <div class="container">
-        <div class="pagination-area">
-            <h1><?=Yii::t('main','all-news')?></h1>
-            <ul>
-                <li><a href="<?=\yii\helpers\Url::home()?>"><?=Yii::t('main','home')?></a> -</li>
-                <li><?=Yii::t('main','all-news')?></li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<div class="news-page-area">
+<section class="page-title pyatno news-title">
     <div class="container">
         <div class="row">
-            <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-                <div class="row">
+            <div class="col-md-12 text-center ">
+                <p>
+                    <?=Yii::t('main','newsCompany')?>
+                </p>
 
-                    <?php if(!empty($models)): ?>
+                <div class="btnch">
+                    <a class="more sweep-to-right text-center" href="#"><?=Yii::t('main','viewCatalog')?></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-                        <?php foreach ($models as $model) :?>
+<section class="calc-text news-text" >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 about-text">
 
-                            <?php if(!empty($model->getLang('id'))): ?>
+                <div class="img">
+                    <img src="/images/calc-text-img.png" alt="img">
+                </div>
 
+                <div class="text">
+                    <p>
+                        Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании модели развития. Не следует, однако забывать, что рамки и место обучения кадров влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям.
+                    </p>
+
+                    <p>
+                        Повседневная практика показывает, что консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании модели развития. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации соответствующий условий активизации. Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="news" >
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12">
+                <h3 class="text-center titler"><?=Yii::t('main','newsMoment')?></h3>
+            </div>
+
+
+            <div class="col-md-3 catalog-form">
+
+                <?= \frontend\widgets\AllNewsSidebar::widget();?>
+
+            </div>
+
+            <div class="col-md-9 catalog-result news-sorting">
+                <div class="result-title">
+                    <a href="#" class="responsive-radio-modal" data-toggle="modal" data-target="#archive-modal"><img src="/images/responsive/news-modal-form-btn.png" alt="btn"></a>
+                    <p class="sort-by"><?=Yii::t('main','filter')?>
+                        <a href="#" id="sortbydate"><span><?=Yii::t('main','asDate')?></span> <img src="/images/catalog-sort-icon.png" class="mr-25" alt="icon"></a>
+                        <a href="#" id="sortbyrate"><span><?=Yii::t('main','asReyting')?></span> <img src="/images/catalog-sort-icon.png" alt="icon"></a>
+                    </p>
+                </div>
+
+                <div class="news-items">
+                    <?php if (!empty($models)): ?>
+
+                        <div class="row">
+                            <?php foreach ($models as $model) :?>
                                 <?php
-                                if($model->main_image && file_exists(Yii::getAlias('@frontend') . '/web' . Yii::$app->params['uploads_url'] . 'news/' . $model->id . '/l_' . $model->getLang('main_image') )) {
 
-                                    $image = Yii::$app->params['frontend'] . Yii::$app->params['uploads_url'] . 'news/' . $model->id . '/l_' .  $model->getLang('main_image');
+                                if($model->main_image && file_exists(Yii::getAlias('@frontend') . '/web' . Yii::$app->params['uploads_url'] . 'News/' . $model->id . '/l_' . $model->getLang('main_image') )) {
 
-                                } else {
+                                    $image = Yii::$app->params['frontend'] . Yii::$app->params['uploads_url'] . 'News/' . $model->id . '/l_' .  $model->getLang('main_image');
+
+                                }else{
 
                                     $image = '/images/default/m_post.jpg';
 
                                 }
                                 ?>
+                                <?php if(!empty($model->getLang('id'))): ?>
 
-                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                        <div class="news-box">
-                                            <div class="news-img-holder">
-                                                <img src="<?=$image?>" class="img-responsive" alt="research">
-                                                <ul class="news-date2">
-                                                    <li><?=date('d M', strtotime($model->event_date))?></li>
-                                                    <li><?=date('Y', strtotime($model->event_date))?></li>
-                                                </ul>
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="item">
+                                        <div class="news-item-act">
+                                            <div class="news-item-theme">
+                                                <p><?=\common\models\NewsCategory::findOne($model->category)->getLang('name')?></p>
                                             </div>
-                                            <h3 class="title-news-left-bold"><a href="<?=\yii\helpers\Url::to(['news/view','id'=>$model->id])?>"><?=$model->getLang('title')?></a></h3>
-                                            <ul class="title-bar-high news-comments">
-                                                <li><a href="<?=\yii\helpers\Url::to(['news/by-cat','id'=>$model->category])?>"><i class="fa fa-tags" aria-hidden="true"></i><?=\common\models\NewsCategory::findOne($model->category)->getLang('name')?></a></li>
-<!--                                                <li><a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i><span>(03)</span> Comments</a></li>-->
-                                            </ul>
-                                            <p><?=$model->getLang('anons')?></p>
+                                            <div class="news-item-share">
+                                                <img class="share" src="/images/news-share.png" alt="share">
+                                                <img class="heart" src="/images/news-heart.png" alt="heart">
+                                            </div>
+                                        </div>
+
+                                        <div class="news-item-title">
+                                            <p class="title"><?=$model->getLang('title')?></p>
+                                            <p class="date"><?=$model->getLang('event_date')?></p>
+                                        </div>
+
+                                        <div class="news-item-text">
+                                            <?=$model->getLang('second_title')?>
+                                        </div>
+
+                                        <div class="text-center btnch">
+                                            <a class="more sweep-to-right text-center" href="#"><?=Yii::t('main','read')?></a>
                                         </div>
                                     </div>
+                                </div>
 
-                            <?php endif; ?>
-
-                        <?php endforeach; ?>
-
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        </div>
                     <?php endif; ?>
 
+                <div class="catalog-pagination">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <?php echo LinkPager::widget(['pagination' => $pagination]);?>
 
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <?php echo LinkPager::widget(['pagination' => $pagination]);?>
-                    </div>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-            <?= \frontend\widgets\Sidebar::widget();?>
+
         </div>
     </div>
-</div>
+</section>
+            <?= \frontend\widgets\SectionConsult::widget();?>
 

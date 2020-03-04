@@ -9,12 +9,16 @@
 namespace frontend\widgets;
 
 
+use common\models\Product;
 use yii\base\Widget;
 
 class SectionProductMob extends Widget
 {
     public function run()
     {
-        return $this->render('SectionProductMob');
+        $models = Product::find()->where(['status'=>1])->all();
+        return $this->render('SectionProductMob',[
+            'models' => $models
+        ]);
     }
 }
