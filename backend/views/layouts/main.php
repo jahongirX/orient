@@ -40,6 +40,9 @@ AppAsset::register($this);
                     $menuItems = [
                         ['label' => Yii::t('main', 'Home'), 'icon' => 'pg-home', 'url' => '/site/index']
                     ];
+                    $menuItems[] = ['label' => Yii::t('main', 'Index'), 'icon' => 'pg-layouts', 'items' => [
+                        ['label' => Yii::t('main', 'Benifites'), 'icon' => 'BF', 'url' => '/benefits/index']
+                    ]];
                     $menuItems[] = ['label' => Yii::t('main', 'Newses'), 'icon' => 'pg-layouts', 'items' => [
                         ['label' => Yii::t('main', 'All News'), 'url' => '/news/index', 'icon' => 'NS'],
                         ['label' => Yii::t('main', 'News Categories'), 'url' => '/news-category/index', 'icon' => 'NC']
@@ -48,7 +51,7 @@ AppAsset::register($this);
                         ['label' => Yii::t('main', 'Pages'), 'url' => '/page/index', 'icon' => 'Ст'],
                         ['label' => Yii::t('main', 'Posts'), 'url' => '/post/index', 'icon' => 'По'],
                         ['label' => Yii::t('main', 'Categories'), 'url' => '/post-category/index', 'icon' => 'Кг'],
-//                        ['label' => Yii::t('main', 'FAQ'), 'url' => '/faq/index', 'icon' => 'Fq'],
+                        ['label' => Yii::t('main', 'FAQ'), 'url' => '/faq/index', 'icon' => 'Fq'],
                         ['label' => Yii::t('main', 'Баннеры'), 'url' => '/advertise/index', 'icon' => 'Ad'],
                         ['label' => Yii::t('main', 'Menu'), 'url' => '/menu/index', 'icon' => 'ME'],
 //                        ['label' => Yii::t('main', 'Partners'), 'url' => '/partner/index', 'icon' => 'PA'],
@@ -81,6 +84,10 @@ AppAsset::register($this);
                     $menuItems[] = ['label' => Yii::t('main', 'Telegram'), 'icon' => 'pg-settings', 'items' => [
                         ['label' => Yii::t('main', 'Main Settings'), 'url' => '/telegram/index', 'icon' => 'ОС'],
                         ['label' => Yii::t('main', 'Users'), 'url' => '/telegram-user/index', 'icon' => 'П'],
+                    ]];
+                    $menuItems[] = ['label' => Yii::t('main', 'Question'), 'icon' => 'pg-settings', 'items' => [
+                        ['label' => Yii::t('main', 'question_answere'), 'url' => '/question-answer/index', 'icon' => 'ВО'],
+                        ['label' => Yii::t('main', 'question_category'), 'url' => '/question-category/index', 'icon' => 'ВК'],
                     ]];
                 }
             ?>

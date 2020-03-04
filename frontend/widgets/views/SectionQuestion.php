@@ -18,428 +18,66 @@
             <div class="col-md-3 ">
                 <div class="list-group" id="list-tab" role="tablist">
 
-                    <a class="quest-main-btn-a active" id="list-techniuqe-question" data-toggle="list" href="#list-technique" role="tab" aria-controls="techniuqe">
-                        <img src="images/question1-icon.png" alt="Question1">
-                        <p>Технические вопросы</p>
-                    </a>
+                    <?php if (!empty($models)): ?>
+                    <?php $count = 1; ?>
+                    <?php foreach ($models as $model): ?>
+                            <?php
+                            if($model->img && file_exists(Yii::getAlias('@frontend') . '/web' . Yii::$app->params['uploads_url'] . 'question-category/' . $model->id . '/l_' . $model->img )) {
 
-                    <a class="quest-main-btn-a" id="list-shipping-question" data-toggle="list" href="#list-shipping" role="tab" aria-controls="shipping">
-                        <img src="images/question2-icon.png" alt="Question2">
-                        <p>Вопросы по доставке</p>
-                    </a>
+                                $image = Yii::$app->params['frontend'] . Yii::$app->params['uploads_url'] . 'question-category/' . $model->id . '/l_' .  $model->img;
 
-                    <a class="quest-main-btn-a" id="list-payment-question" data-toggle="list" href="#list-payment" role="tab" aria-controls="payment">
-                        <img src="images/question3-icon.png" alt="Question3">
-                        <p>Вопросы по оплате</p>
-                    </a>
+                            } else {
 
-                    <a class="quest-main-btn-a" id="list-contract-question" data-toggle="list" href="#list-contract" role="tab" aria-controls="contract">
-                        <img src="images/question4-icon.png" alt="Question4">
-                        <p>Вопросы по договору</p>
-                    </a>
+                                $image = '/images/default/m_post.jpg';
 
-                    <a class="quest-main-btn-a" id="list-supply-question" data-toggle="list" href="#list-supply" role="tab" aria-controls="supply">
-                        <img src="images/question5-icon.png" alt="Question5">
-                        <p>Вопросы по срокам поставок</p>
-                    </a>
+                            }
+                            ?>
+
+                            <a class="quest-main-btn-a <?=($count == 1)? 'active': ''; ?>" id="<?=$model->id?>-question" data-toggle="list" href="#<?=$model->id?>" role="tab" aria-controls="techniuqe">
+                                <img src="<?=$image ?>" alt="Question1">
+                                <p><?=$model->name ?></p>
+                            </a>
+                        <?php $count++ ?>
+                    <?php endforeach; ?>
+                    <?php endif; ?>
 
                 </div>
             </div>
 
             <div class="col-md-9">
+                <?php if (!empty($models)): ?>
+
                 <div class="tab-content" id="nav-tabContent">
 
-                    <div class="tab-pane fade show active" id="list-technique" role="tabpanel" aria-labelledby="list-techniuqe-question">
+                    <?php foreach ($models as $model): ?>
 
-                        <div class="quest question1-1">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#Answer1-1" aria-expanded="false" aria-controls="Answer1-1">
-                                <p>Условный текст который придумал дизайнер для написания вороса</p>
-                                <img src="images/tab-icon.png" alt="Tab icon">
-                            </button>
+                        <div class="tab-pane fade show active" id="<?=$model->id?>" role="tabpanel" aria-labelledby="<?=$model->id?>-question">
+
+                            <div class="quest question1-1">
+                                <button class="btn " type="button" data-toggle="collapse" data-target="#Answer1-1" aria-expanded="false" aria-controls="Answer1-1">
+                                    <p>Условный текст который придумал дизайнер для написания вороса</p>
+                                    <img src="images/tab-icon.png" alt="Tab icon">
+                                </button>
 
 
-                            <div class="collapse answer" id="Answer1-1">
-                                <div class="card card-body">
-                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
+                                <div class="collapse answer" id="Answer1-1">
+                                    <div class="card card-body">
+                                        Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
+                    <?php endforeach; ?>
 
-                        <div class="quest question1-2">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#Answer1-2" aria-expanded="false" aria-controls="Answer1-2">
-                                <p>Условный текст который придумал дизайнер для написания вороса</p>
-                                <img src="images/tab-icon.png" alt="Tab icon">
-                            </button>
-
-
-                            <div class="collapse answer" id="Answer1-2">
-                                <div class="card card-body">
-                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="quest question1-3">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#Answer1-3" aria-expanded="false" aria-controls="Answer1-3">
-                                <p>Условный текст который придумал дизайнер для написания вороса</p>
-                                <img src="images/tab-icon.png" alt="Tab icon">
-                            </button>
-
-
-                            <div class="collapse answer" id="Answer1-3">
-                                <div class="card card-body">
-                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="quest question1-4">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#Answer1-4" aria-expanded="false" aria-controls="Answer1-4">
-                                <p>Условный текст который придумал дизайнер для написания вороса</p>
-                                <img src="images/tab-icon.png" alt="Tab icon">
-                            </button>
-
-
-                            <div class="collapse answer" id="Answer1-4">
-                                <div class="card card-body">
-                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="quest question1-5">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#Answer1-5" aria-expanded="false" aria-controls="Answer1-5">
-                                <p>Условный текст который придумал дизайнер для написания вороса</p>
-                                <img src="images/tab-icon.png" alt="Tab icon">
-                            </button>
-
-
-                            <div class="collapse answer" id="Answer1-5">
-                                <div class="card card-body">
-                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-
-
-
-
-                    <div class="tab-pane fade" id="list-shipping" role="tabpanel" aria-labelledby="list-shipping-question">
-
-                        <div class="quest question2-1">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#Answer2-1" aria-expanded="false" aria-controls="collapseExample">
-                                <p>Условный текст который придумал дизайнер для написания вороса</p>
-                                <img src="images/tab-icon.png" alt="Tab icon">
-                            </button>
-
-
-                            <div class="collapse answer" id="Answer2-1">
-                                <div class="card card-body">
-                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="quest question2-2">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#Answer2-2" aria-expanded="false" aria-controls="collapseExample">
-                                <p>Условный текст который придумал дизайнер для написания вороса</p>
-                                <img src="images/tab-icon.png" alt="Tab icon">
-                            </button>
-
-
-                            <div class="collapse answer" id="Answer2-2">
-                                <div class="card card-body">
-                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="quest question2-3">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#Answer2-3" aria-expanded="false" aria-controls="collapseExample">
-                                <p>Условный текст который придумал дизайнер для написания вороса</p>
-                                <img src="images/tab-icon.png" alt="Tab icon">
-                            </button>
-
-
-                            <div class="collapse answer" id="Answer2-3">
-                                <div class="card card-body">
-                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="quest question2-4">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#Answer2-4" aria-expanded="false" aria-controls="collapseExample">
-                                <p>Условный текст который придумал дизайнер для написания вороса</p>
-                                <img src="images/tab-icon.png" alt="Tab icon">
-                            </button>
-
-
-                            <div class="collapse answer" id="Answer2-4">
-                                <div class="card card-body">
-                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="quest question2-5">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#Answer2-5" aria-expanded="false" aria-controls="collapseExample">
-                                <p>Условный текст который придумал дизайнер для написания вороса</p>
-                                <img src="images/tab-icon.png" alt="Tab icon">
-                            </button>
-
-
-                            <div class="collapse answer" id="Answer2-5">
-                                <div class="card card-body">
-                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-
-
-
-
-                    <div class="tab-pane fade" id="list-payment" role="tabpanel" aria-labelledby="list-payment-question">
-                        <div class="quest question3-1">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#Answer3-1" aria-expanded="false" aria-controls="collapseExample">
-                                <p>Условный текст который придумал дизайнер для написания вороса</p>
-                                <img src="images/tab-icon.png" alt="Tab icon">
-                            </button>
-
-
-                            <div class="collapse answer" id="Answer3-1">
-                                <div class="card card-body">
-                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="quest question3-2">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#Answer3-2" aria-expanded="false" aria-controls="collapseExample">
-                                <p>Условный текст который придумал дизайнер для написания вороса</p>
-                                <img src="images/tab-icon.png" alt="Tab icon">
-                            </button>
-
-
-                            <div class="collapse answer" id="Answer3-2">
-                                <div class="card card-body">
-                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="quest question3-3">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#Answer3-3" aria-expanded="false" aria-controls="collapseExample">
-                                <p>Условный текст который придумал дизайнер для написания вороса</p>
-                                <img src="images/tab-icon.png" alt="Tab icon">
-                            </button>
-
-
-                            <div class="collapse answer" id="Answer3-3">
-                                <div class="card card-body">
-                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="quest question3-4">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#Answer3-4" aria-expanded="false" aria-controls="collapseExample">
-                                <p>Условный текст который придумал дизайнер для написания вороса</p>
-                                <img src="images/tab-icon.png" alt="Tab icon">
-                            </button>
-
-
-                            <div class="collapse answer" id="Answer3-4">
-                                <div class="card card-body">
-                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="quest question3-5">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#Answer3-5" aria-expanded="false" aria-controls="collapseExample">
-                                <p>Условный текст который придумал дизайнер для написания вороса</p>
-                                <img src="images/tab-icon.png" alt="Tab icon">
-                            </button>
-
-
-                            <div class="collapse answer" id="Answer3-5">
-                                <div class="card card-body">
-                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-                    <div class="tab-pane fade" id="list-contract" role="tabpanel" aria-labelledby="list-contract-question">
-
-                        <div class="quest question4-1">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#Answer4-1" aria-expanded="false" aria-controls="collapseExample">
-                                <p>Условный текст который придумал дизайнер для написания вороса</p>
-                                <img src="images/tab-icon.png" alt="Tab icon">
-                            </button>
-
-
-                            <div class="collapse answer" id="Answer4-1">
-                                <div class="card card-body">
-                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="quest question4-2">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#Answer4-2" aria-expanded="false" aria-controls="collapseExample">
-                                <p>Условный текст который придумал дизайнер для написания вороса</p>
-                                <img src="images/tab-icon.png" alt="Tab icon">
-                            </button>
-
-
-                            <div class="collapse answer" id="Answer4-2">
-                                <div class="card card-body">
-                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="quest question4-3">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#Answer4-3" aria-expanded="false" aria-controls="collapseExample">
-                                <p>Условный текст который придумал дизайнер для написания вороса</p>
-                                <img src="images/tab-icon.png" alt="Tab icon">
-                            </button>
-
-
-                            <div class="collapse answer" id="Answer4-3">
-                                <div class="card card-body">
-                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="quest question4-4">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#Answer4-4" aria-expanded="false" aria-controls="collapseExample">
-                                <p>Условный текст который придумал дизайнер для написания вороса</p>
-                                <img src="images/tab-icon.png" alt="Tab icon">
-                            </button>
-
-
-                            <div class="collapse answer" id="Answer4-4">
-                                <div class="card card-body">
-                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="quest question4-5">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#Answer4-5" aria-expanded="false" aria-controls="collapseExample">
-                                <p>Условный текст который придумал дизайнер для написания вороса</p>
-                                <img src="images/tab-icon.png" alt="Tab icon">
-                            </button>
-
-
-                            <div class="collapse answer" id="Answer4-5">
-                                <div class="card card-body">
-                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-
-
-                    <div class="tab-pane fade" id="list-supply" role="tabpanel" aria-labelledby="list-supply-question">
-
-                        <div class="quest question5-1">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#Answer5-1" aria-expanded="false" aria-controls="collapseExample">
-                                <p>Условный текст который придумал дизайнер для написания вороса</p>
-                                <img src="images/tab-icon.png" alt="Tab icon">
-                            </button>
-
-
-                            <div class="collapse answer" id="Answer5-1">
-                                <div class="card card-body">
-                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="quest question5-2">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#Answer5-2" aria-expanded="false" aria-controls="collapseExample">
-                                <p>Условный текст который придумал дизайнер для написания вороса</p>
-                                <img src="images/tab-icon.png" alt="Tab icon">
-                            </button>
-
-
-                            <div class="collapse answer" id="Answer5-2">
-                                <div class="card card-body">
-                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="quest question5-3">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#Answer5-3" aria-expanded="false" aria-controls="collapseExample">
-                                <p>Условный текст который придумал дизайнер для написания вороса</p>
-                                <img src="images/tab-icon.png" alt="Tab icon">
-                            </button>
-
-
-                            <div class="collapse answer" id="Answer5-3">
-                                <div class="card card-body">
-                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="quest question5-4">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#Answer5-4" aria-expanded="false" aria-controls="collapseExample">
-                                <p>Условный текст который придумал дизайнер для написания вороса</p>
-                                <img src="images/tab-icon.png" alt="Tab icon">
-                            </button>
-
-
-                            <div class="collapse answer" id="Answer5-4">
-                                <div class="card card-body">
-                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="quest question5-5">
-                            <button class="btn " type="button" data-toggle="collapse" data-target="#Answer5-5" aria-expanded="false" aria-controls="collapseExample">
-                                <p>Условный текст который придумал дизайнер для написания вороса</p>
-                                <img src="images/tab-icon.png" alt="Tab icon">
-                            </button>
-
-
-                            <div class="collapse answer" id="Answer5-5">
-                                <div class="card card-body">
-                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
                 </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>
 </section>
 
+    <!--///////////////////////////////////////////////////////////////////////////////////mobil-->
 <section class="questions hidden-block-for-mobile">
     <div class="container">
         <div class="row">

@@ -9,12 +9,16 @@
 namespace frontend\widgets;
 
 
+use common\models\Benefits;
 use yii\base\Widget;
 
 class SectionStrength extends Widget
 {
     public function run()
     {
-       return $this->render('SectionStrength');
+        $models = Benefits::find()->where(['status'=>1])->limit(6)->all();
+       return $this->render('SectionStrength',[
+           'models' => $models
+       ]);
     }
 }

@@ -26,10 +26,10 @@ return [
     'services_limit' => 8,
     'services_category_limit' => 3,
 
-    'main_language' => 'uz',
+    'main_language' => 'ru',
     'main_lang' => [
-        'abb' => 'uz',
-        'name' => 'O`zbekcha'
+        'abb' => 'ru',
+        'name' => 'Ruscha'
     ],
     'main_language_id' => 1,
     'lang_id' => 1,
