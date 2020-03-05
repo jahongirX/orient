@@ -32,19 +32,19 @@ $this->title = \common\components\StaticFunctions::getSettings('title') . " - " 
                     <div class="organizatsiya-name"><?=Yii::t('main','companyFactory')?></div>
                     <div class="addre7ss">
                         <img src="/images/c-place-marker.png" alt="">
-                        <h5><?=\common\models\Settings::findOne('адрес')->getLang('val')?></h5>
+                        <h5><?=StaticFunctions::getSettings('адрес')?></h5>
                     </div>
                     <div class="work-time">
                         <img src="/images/c-time-marker.png" alt="">
-                        <h5><?=\common\models\Settings::findOne('Режим-время')->getLang('val')?></h5>
+                        <h5><?=StaticFunctions::getSettings('Режим-время')?></h5>
                     </div>
                     <div class="phone">
                         <img src="/images/phone-marker.png" alt="">
-                        <h5><?=\common\models\Settings::findOne('телефон')->getLang('val')?></h5>
+                        <h5><?=StaticFunctions::getSettings('телефон')?></h5>
                     </div>
                     <div class="email">
                         <img src="/images/email-marker.png" alt="">
-                        <a href="#"><?=\common\models\Settings::findOne('эмаил')->getLang('val')?></a>
+                        <a href="#"><?=StaticFunctions::getSettings('эмаил')?></a>
                     </div>
                 </div>
 
@@ -59,19 +59,19 @@ $this->title = \common\components\StaticFunctions::getSettings('title') . " - " 
                     <div class="organizatsiya-name"><?=Yii::t('main','companyFactory')?></div>
                     <div class="address">
                         <img src="/images/c-place-marker.png" alt="">
-                        <h5><?=\common\models\Settings::findOne('адрес')->getLang('val')?></h5>
+                        <h5><?=StaticFunctions::getSettings('адрес')?></h5>
                     </div>
                     <div class="work-time">
                         <img src="/images/c-time-marker.png" alt="">
-                        <h5><?=\common\models\Settings::findOne('Режим-время')->getLang('val')?></h5>
+                        <h5><?=StaticFunctions::getSettings('Режим-время')?></h5>
                     </div>
                     <div class="phone">
                         <img src="/images/phone-marker.png" alt="">
-                        <h5><?=\common\models\Settings::findOne('телефон')->getLang('val')?></h5>
+                        <h5><?=StaticFunctions::getSettings('телефон')?></h5>
                     </div>
                     <div class="email">
                         <img src="/images/email-marker.png" alt="">
-                        <a href="#"><?=\common\models\Settings::findOne('эмаил')->getLang('val')?></a>
+                        <a href="#"><?=StaticFunctions::getSettings('эмаил')?></a>
                     </div>
                 </div>
 
