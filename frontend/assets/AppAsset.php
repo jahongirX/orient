@@ -20,6 +20,12 @@ class AppAsset extends AssetBundle
         "fonts/stylesheet.css",
         "css/odometer.min.css",
         "css/pyatno.css",
+        "css/qwerty.css",
+        "css/qwerty2.css",
+        "css/qwerty3.css",
+        "css/qwerty4.css",
+        "css/wowanimate.css",
+        "css/nav-style.css",
         "css/style.css",
         "css/responsive.css",
     ];
