@@ -41,7 +41,8 @@ class Callback extends ActiveRecord
         return [
             [['status'], 'integer'],
             [['date'], 'safe'],
-            [['phone',],'string',]
+            [['phone',],'string',],
+            [['name',],'string',]
         ];
     }
 
@@ -52,7 +53,8 @@ class Callback extends ActiveRecord
     {
         return [
             'id' => 'ID',
-            'phone' => Yii::t('main','Phone'),
+            'phone' => Yii::t('main','Ваш телефон'),
+            'name' => Yii::t('main','Ваше имя'),
             'date' => Yii::t('main','Date'),
             'status' => Yii::t('main','Status'),
         ];

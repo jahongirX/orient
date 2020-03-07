@@ -82,13 +82,13 @@ function renderMenu2($id){
                     <div class="phone">
 
                         <div class="phone-info">
-                            <p><?=\common\models\Settings::findOne('телефон')->getLang('val')?></p>
+                            <p><?=StaticFunctions::getSettings('телефон'); ?></p>
                         </div>
 
                         <div class="phone-title">
-                            <a href="#">
+                            <a href="tel:<?=StaticFunctions::getSettings('телефон'); ?>">
                                 <img src="/images/mobilemenu/phone-icon.png" alt="Place-Marker">
-                                <p><?=\common\models\Settings::findOne('Бесплатный-звонок')->getLang('val')?></p>
+                                <p><?=Yii::t('main', 'Бесплатный-звонок') ?></p>
                             </a>
                         </div>
                     </div>
@@ -141,7 +141,7 @@ function renderMenu2($id){
                 <div class="work-info">
                     <div class="city">
                         <div class="city-title">
-                            <p>Ваш город</p>
+                            <p><?=Yii::t('main', 'Ваш город')?></p>
                         </div>
 
                         <div class="city-info">
@@ -153,7 +153,7 @@ function renderMenu2($id){
                     <div class="work-time">
 
                         <div class="work-time-title">
-                            <p><?=\common\models\Settings::findOne('Режим')->getLang('val')?></p>
+                            <p><?=Yii::t('main', 'Режим') ?></p>
                         </div>
 
                         <div class="work-time-info">
@@ -225,7 +225,7 @@ function renderMenu2($id){
 
                         <div class="city">
                             <div class="city-title">
-                                <p>Ваш город</p>
+                                <p><?=Yii::t('main', 'Ваш город')?></p>
                             </div>
 
                             <div class="city-info">
@@ -236,7 +236,7 @@ function renderMenu2($id){
 
                         <div class="work-time">
                             <div class="work-time-title">
-                                <p><?=\common\models\Settings::findOne('Режим')->getLang('val')?></p>
+                                <p><?=Yii::t('main', 'Режим') ?></p>
                             </div>
 
                             <div class="work-time-info">
@@ -269,9 +269,9 @@ function renderMenu2($id){
                             </div>
 
                             <div class="phone-title">
-                                <a href="#">
-                                    <img src="/images/phone-marker.png" alt="Place-Marker">
-                                    <p><?=\common\models\Settings::findOne('Бесплатный-звонок')->getLang('val')?></p>
+                                <a href="tel:<?=StaticFunctions::getSettings('телефон'); ?>">
+                                    <img src="/images/mobilemenu/phone-icon.png" alt="Place-Marker">
+                                    <p><?=Yii::t('main', 'Бесплатный-звонок') ?></p>
                                 </a>
                             </div>
                         </div>

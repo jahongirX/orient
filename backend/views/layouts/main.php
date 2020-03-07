@@ -73,6 +73,10 @@ AppAsset::register($this);
                         ['label' => Yii::t('main', 'Albums'), 'url' => '/album/index', 'icon' => 'Фа'],
                         ['label' => Yii::t('main', 'Images'), 'url' => '/image/index', 'icon' => 'Фо']
                     ]];
+                    $menuItems[] = ['label' => Yii::t('main', 'Филиалы'), 'icon' => 'fa fa-list-alt', 'items' => [
+                        ['label' => Yii::t('main', 'Филиал'), 'url' => '/filial/index', 'icon' => 'Ф'],
+                        ['label' => Yii::t('main', 'Филиалы район'), 'url' => '/filial-region/index', 'icon' => 'ФР']
+                    ]];
                     $menuItems[] = ['label' => Yii::t('main', 'Settings'), 'icon' => 'pg-settings', 'items' => [
                         ['label' => Yii::t('main', 'Users'), 'url' => '/user/index', 'icon' => 'П'],
 //                        ['label' => Yii::t('main', 'Subscribers'), 'url' => '/email/index', 'icon' => 'П'],
@@ -83,7 +87,7 @@ AppAsset::register($this);
                         ['label' => Yii::t('main', 'Main Settings'), 'url' => '/telegram/index', 'icon' => 'ОС'],
                         ['label' => Yii::t('main', 'Users'), 'url' => '/telegram-user/index', 'icon' => 'П'],
                     ]];
-                    $menuItems[] = ['label' => Yii::t('main', 'Question'), 'icon' => 'pg-settings', 'items' => [
+                    $menuItems[] = ['label' => Yii::t('main', 'Question'), 'icon' => 'fa fa-question-circle-o', 'items' => [
                         ['label' => Yii::t('main', 'question_answere'), 'url' => '/question-answer/index', 'icon' => 'ВО'],
                         ['label' => Yii::t('main', 'question_category'), 'url' => '/question-category/index', 'icon' => 'ВК'],
                     ]];
