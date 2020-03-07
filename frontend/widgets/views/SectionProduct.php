@@ -61,7 +61,7 @@
 
                     }
                     ?>
-                    <?php if(!empty($model->getLang('id'))): ?>
+                    <?php if(!empty($product->getLang('id'))): ?>
                     <div class="col-md-3 product-item <?=\common\models\ProductCategory::findOne([$product->category_id])->getLang('name')?>">
                         <div class="item">
                             <p class="product-title"><?=$product->getLang('name')?></p>
@@ -72,7 +72,7 @@
                             <p class="product-construction"><?=Yii::t('main','butt')?> <?=$product->getLang('butt')?></p>
                             <p class="product-price"><?=Yii::t('main','price')?> <span class="price-count"><?=$product->getLang('price')?></span> <span class="rubl-icon"><?=Yii::t('main','$')?></span> </p>
 
-                            <a href="<?=yii\helpers\Url::to(['product-cart/view','id'=>$model->id])?>">
+                            <a href="<?=yii\helpers\Url::to(['product/view','id'=>$product->id])?>">
                                 <button>
                                     <img src="images/product-cart.png" alt="Product cart"> <?=Yii::t('main','korzina')?>
                                 </button>

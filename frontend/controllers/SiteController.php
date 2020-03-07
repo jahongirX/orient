@@ -1,6 +1,7 @@
 <?php
 namespace frontend\controllers;
 
+use app\models\About;
 use Codeception\Lib\Connector\Guzzle;
 use Guzzle\Http\Url;
 use common\models\Menu;
@@ -294,8 +295,10 @@ class SiteController extends Controller
 
     public function actionAbout()
     {
-        $adverts = Advertise::find()->limit(4)->all();
-        return $this->render('about',['adverts' => $adverts]);
+        $adverts = \common\models\About::find()->where(['status'=>1])->all();
+        return $this->render('about',[
+            'adverts' => $adverts
+        ]);
     }
 
     public function actionRequestPasswordReset()

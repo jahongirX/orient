@@ -18,9 +18,9 @@ use yii\widgets\ActiveForm;
 
             <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
-<!--            --><?//= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
-<!---->
-<!--            --><?//= $form->field($model, 'position')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
+
+            <?= $form->field($model, 'position')->textInput(['maxlength' => true]) ?>
 
             <?= $form->field($model, 'message')->textarea(['rows' => 6]) ?>
 

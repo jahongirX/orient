@@ -20,20 +20,26 @@ class AppAsset extends AssetBundle
         "fonts/stylesheet.css",
         "css/odometer.min.css",
         "css/pyatno.css",
+        "css/qwerty.css",
+        "css/qwerty2.css",
+        "css/qwerty3.css",
+        "css/qwerty4.css",
+        "css/wowanimate.css",
+        "css/nav-style.css",
         "css/style.css",
         "css/responsive.css",
+
     ];
 
     public $js = [
         "js/jquery-3.2.1.min.js",
-//      "https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"
         "js/wow.min2.js",
         "js/parallax.min.js",
         "libs/bootstrap4/popper.js",
         "libs/bootstrap4/bootstrap.min.js",
 
         "libs/magnific-popup/jquery.magnific-popup.min.js",
-//      "libs/magnific-popup/zoom.js",
+        "libs/magnific-popup/zoom.js",
         "libs/flipclock/js/flipclock.min.js",
         "js/owl.carousel.min.js",
         "js/owl.carousel2.thumbs.js",
@@ -46,6 +52,8 @@ class AppAsset extends AssetBundle
         "js/isotope.pkgd.min.js",
         "js/responsive.js",
         "js/menuscript.js",
+        "js/qwerty.js",
+        "js/qwerty2.js",
         "js/main.js",
     ];
 

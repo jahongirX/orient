@@ -96,6 +96,7 @@ class NewsController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+
         $image_old = $model->main_image;
 
         if (Yii::$app->request->isAjax && $model->load(Yii::$app->request->post()))

@@ -113,7 +113,7 @@ $this->title = \common\components\StaticFunctions::getSettings('title') . " - " 
                                         </div>
 
                                         <div class="text-center btnch">
-                                            <a class="more sweep-to-right text-center" href="#"><?=Yii::t('main','read')?></a>
+                                            <a class="more sweep-to-right text-center" href="<?=yii\helpers\Url::to(['news/view','id'=>$model->id])?>"><?=Yii::t('main','read-more')?></a>
                                         </div>
                                     </div>
                                 </div>

@@ -10,13 +10,14 @@ namespace frontend\widgets;
 
 
 use common\models\Product;
+use common\models\ProductCategory;
 use yii\base\Widget;
 
 class SectionProductMob extends Widget
 {
     public function run()
     {
-        $models = Product::find()->where(['status'=>1])->all();
+        $models = ProductCategory::find()->all();
         return $this->render('SectionProductMob',[
             'models' => $models
         ]);

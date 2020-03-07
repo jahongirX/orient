@@ -1,7 +1,7 @@
 <?php
 return [
-    'frontend' => 'http://f.orent',
-    'backend' => 'http://b.orent',
+    'frontend' => 'http://f.orient',
+    'backend' => 'http://b.orient',
 
     'images_dir' => '/frontend/web/uploads/images/',
     'images_url' => '/uploads/images/',
@@ -31,8 +31,8 @@ return [
         'abb' => 'ru',
         'name' => 'Ruscha'
     ],
-    'main_language_id' => 1,
-    'lang_id' => 1,
+    'main_language_id' => 3,
+    'lang_id' => 3,
 
     'pagination' => 10,
 

@@ -50,8 +50,8 @@ class Testimonials extends ActiveRecord
             [['message'], 'string'],
             [['status'], 'integer'],
             [['date'], 'safe'],
-            [['name', 'position', 'image'], 'string', 'max' => 300],
-            [['phone'], 'string', 'max' => 12],
+            [['name', 'position', 'image','phone'], 'string', 'max' => 300],
+
         ];
     }
 

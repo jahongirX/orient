@@ -61,7 +61,7 @@ AppAsset::register($this);
                         ['label' => Yii::t('main', 'Product'), 'url' => '/product/index', 'icon' => 'Se'],
                         ['label' => Yii::t('main', 'Product Categories'), 'url' => '/product-category/index', 'icon' => 'SK'],
                     ]];
-//                    $menuItems[] = ['label' => Yii::t('main', 'Testimonials'), 'url' => '/testimonials/index', 'icon' => 'pg-comment'];
+                    $menuItems[] = ['label' => Yii::t('main', 'Testimonials'), 'url' => '/testimonials/index', 'icon' => 'pg-comment'];
                     $menuItems[] = ['label' => Yii::t('main', 'Contacts'), 'icon' => 'pg-layouts', 'items' => [
                         ['label' => Yii::t('main', 'Contacts'), 'url' => '/contact/index', 'icon' => 'Ст'],
                     ]];

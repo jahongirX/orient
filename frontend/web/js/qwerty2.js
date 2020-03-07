@@ -7,7 +7,7 @@ $(document).ready(function(){
         thumbsPrerendered: true,
         loop:true,
         nav: true,
-        navText: ["<img src='images/card-carousel-prev.png'>","<img src='images/card-carousel-next.png'>"],
+        navText: ["<img src='/images/card-carousel-prev.png'>","<img src='/images/card-carousel-next.png'>"],
         dots: false,
         margin: 25,
         items: 1
