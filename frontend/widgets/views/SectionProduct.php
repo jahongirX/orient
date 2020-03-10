@@ -30,13 +30,13 @@
 
                 }
                 ?>
-                <?php if(!empty($model->getLang('id'))): ?>
-                    <div class="col production-item" data-filter="<?=$model->getLang('name')?>">
+
+                    <div class="col production-item" data-filter="<?=$model->name?>">
                         <img src="<?=$image?>" alt="production1">
-                        <h5><?=$model->getLang('description')?></h5>
+                        <h5><?=$model->description?></h5>
                     </div>
 
-                <?php endif; ?>
+
                 <?php endforeach; ?>
             </div>
         <?php endif; ?>
@@ -61,10 +61,10 @@
 
                     }
                     ?>
-                    <?php if(!empty($product->getLang('id'))): ?>
+
                     <div class="col-md-3 product-item <?=\common\models\ProductCategory::findOne([$product->category_id])->getLang('name')?>">
                         <div class="item">
-                            <p class="product-title"><?=$product->getLang('name')?></p>
+                            <p class="product-title"><?=$product->name?></p>
                             <p class="product-mark"><?=Yii::t('main','articul')?> <?=$product->getLang('articul')?></p>
                             <p class="product-img"><img src="<?=$image?>" alt="Product"></p>
                             <p class="product-weight"><?=Yii::t('main','articul')?> <?=$product->getLang('articul')?></p>
@@ -74,13 +74,12 @@
 
                             <a href="<?=yii\helpers\Url::to(['product/view','id'=>$product->id])?>">
                                 <button>
-                                    <img src="images/product-cart.png" alt="Product cart"> <?=Yii::t('main','korzina')?>
+                                    <img src="/images/product-cart.png" alt="Product cart"> <?=Yii::t('main','korzina')?>
                                 </button>
                             </a>
                         </div>
                     </div>
 
-                        <?php endif; ?>
                     <?php endforeach; ?>
                 </div>
             </div>
@@ -91,7 +90,7 @@
 
         <div class="row">
             <div class="col-md-12 text-center btnch">
-                <a class="more sweep-to-right text-center" href="#"><?=Yii::t('main','goCatalog')?></a>
+                <a class="more sweep-to-right text-center" href="<?=yii\helpers\Url::to(['product/catalog'])?>"><?=Yii::t('main','goCatalog')?></a>
             </div>
         </div>
     </div>

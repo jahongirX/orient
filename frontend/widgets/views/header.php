@@ -317,7 +317,7 @@ function renderMenu2($id){
                             <p>Полный цикл производства <br>
                                 <span id="typing"></span><br>
                                 компанией «ОТМ»</p>
-                            <a href="#">Посмотреть каталог</a>
+                            <a href="<?=yii\helpers\Url::to(['product/catalog'])?>"><?=Yii::t('main','goCatalog')?></a>
                         </div>
 
                         <div class=" carousel-img">

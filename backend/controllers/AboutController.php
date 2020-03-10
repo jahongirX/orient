@@ -43,6 +43,7 @@ class AboutController extends Controller
 
         $searchModel = new AboutSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider->pagination->pageSize=Yii::$app->params['pagination'];
 
         return $this->render('index', [
             'searchModel' => $searchModel,
@@ -153,9 +154,9 @@ class AboutController extends Controller
 
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
-
-        return $this->redirect(['index']);
+        if (Yii::$app->request->isAjax) {
+            $this->findModel($id)->delete();
+        }
     }
 
 
@@ -191,7 +192,7 @@ class AboutController extends Controller
             $model->size = $file->size;
             $model->extension = $ext;
             $model->created_date = date('Y-m-d H:i:s');
-            $model->creator = Yii::$app->user->id;
+//            $model->creator = Yii::$app->user->id;
             $model->status = 1;
             $model->save();
 

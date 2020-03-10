@@ -1,10 +1,12 @@
 <?php
 
+use common\components\StaticFunctions;
 use yii\helpers\Html;
 use yii\grid\GridView;
 
 $this->title = Yii::t('main', 'Abouts');
 $this->params['breadcrumbs'][] = $this->title;
+$this->registerJsFile('/plugins/bootstrap-select2/select2.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
 
 ?>
 
@@ -67,9 +69,22 @@ $this->params['breadcrumbs'][] = $this->title;
                                                 'attribute' => 'title',
                                                 'contentOptions' => ['class' => 'v-align-middle'],
                                             ],
-[
-                                                'attribute' => 'main_image',
-                                                'contentOptions' => ['class' => 'v-align-middle'],
+                                            [
+                                                'label' => Yii::t('main', 'Image'),
+                                                'headerOptions' => ['style' => 'min-width:120px;max-width:120px;width:120px'],
+                                                'content' => function($model)
+                                                {
+                                                    if($model->main_image && file_exists(Yii::getAlias('@frontend') . '/web' . Yii::$app->params['uploads_url'] . Yii::$app->controller->id . '/' . $model->id . '/s_' . $model->main_image ))
+                                                    {
+
+                                                        return '<img class="img-responsive postImage" data-title="' . htmlentities(StaticFunctions::getPartOfText($model->title, 100)) . '" data-img="' . Yii::$app->params['frontend'] . Yii::$app->params['uploads_url'] . Yii::$app->controller->id . '/' . $model->id . '/l_' . $model->main_image . '" src="' .  Yii::$app->params['frontend'] . Yii::$app->params['uploads_url'] . Yii::$app->controller->id . '/' . $model->id . '/s_' . $model->main_image . '"/>';
+
+                                                    } else {
+
+                                                        return '<img class="img-responsive"src="' . Yii::$app->params['frontend'] . '/images/default/s_post.jpg"/>';
+
+                                                    }
+                                                },
                                             ],
 [
                                                 'attribute' => 'info',

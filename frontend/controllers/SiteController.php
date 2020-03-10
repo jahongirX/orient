@@ -293,13 +293,13 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionAbout()
-    {
-        $adverts = \common\models\About::find()->where(['status'=>1])->all();
-        return $this->render('about',[
-            'adverts' => $adverts
-        ]);
-    }
+//    public function actionAbout()
+//    {
+//        $adverts = \common\models\About::find()->where(['status'=>1])->all();
+//        return $this->render('about',[
+//            'adverts' => $adverts
+//        ]);
+//    }
 
     public function actionRequestPasswordReset()
     {

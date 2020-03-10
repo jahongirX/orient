@@ -57,17 +57,17 @@ use yii\widgets\ActiveForm; ?>
 
 
 <div class="index pyatno-1">
-    <img src="images/pyatno-1.png" alt="pyatno" >
+    <img src="/images/pyatno-1.png" alt="pyatno" >
 </div>
 <div class="index pyatno-2">
-    <img src="images/pyatno-2.png" alt="pyatno" >
+    <img src="/images/pyatno-2.png" alt="pyatno" >
 </div>
 <div class="index pyatno-3">
-    <img src="images/pyatno-3.png" alt="pyatno" >
+    <img src="/images/pyatno-3.png" alt="pyatno" >
 </div>
 <div class="index pyatno-4">
-    <img src="images/pyatno-4.png" alt="pyatno" >
+    <img src="/images/pyatno-4.png" alt="pyatno" >
 </div>
 <div class="index pyatno-5">
-    <img src="images/pyatno-5.png" alt="pyatno" >
+    <img src="/images/pyatno-5.png" alt="pyatno" >
 </div>

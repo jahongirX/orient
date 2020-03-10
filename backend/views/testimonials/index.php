@@ -47,12 +47,13 @@ $this->params['breadcrumbs'][] = $this->title;
                                             return '<div class="checkbox check-success"><input class="post-check" type="checkbox" name="' . $model->id . '" id="checkbox' . $model->id . '"><label for="checkbox' . $model->id . '"></label></div>';
                                         }
                                     ],
-                                    ['class' => 'yii\grid\SerialColumn'],
-
-//                                    'id',
+//                                    ['class' => 'yii\grid\SerialColumn'],
+//
+////                                    'id',
+//                                    'attribute' => 'status',
                                     'name',
-                                    'phone',
-                                    'message:ntext',
+//                                    'phone',
+//                                    'message:ntext',
                                     
                                     [
                                         'attribute' => 'status',

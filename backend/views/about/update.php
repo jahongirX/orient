@@ -1,14 +1,12 @@
 <?php
 
 use yii\helpers\Html;
-use yii\grid\GridView;
-use yii\helpers\Url;
-use yii\widgets\ActiveForm;
+use common\components\StaticFunctions;
 
 $this->title = Yii::t('main', 'Update About');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('main', 'Abouts'), 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->title, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs']['title'] = $this->title;
+$this->params['breadcrumbs'][] = ['label' => StaticFunctions::getPartOfText( $model->title, 50 ), 'url' => ['view', 'id' => $model->id]];
+$this->params['breadcrumbs'][] = $this->title;
 
 ?>
 

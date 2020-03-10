@@ -31,11 +31,11 @@ $this->title = nl2br(Html::encode($message));
                         <div class="contentarea">
 
                         <div class="row">
-                                <div class="col-sm-6 module_cont pb0">
+                                <div class="col-md-8 col-sm-6 module_cont pb0 ml-auto mr-auto">
                                     <h1 class="title_404">404</h1>
 
                                 </div>
-                                <div class="col-sm-6 module_cont pt26 pb125">
+                                <div class="col-md-8 ml-auto mr-auto col-sm-6 module_cont pt26 pb125">
                                     <div class="bg_title">
                                         <h2 class="text-left mobile-center"><?= nl2br(Html::encode($message)) ?></h2>
                                     </div>

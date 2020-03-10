@@ -15,11 +15,12 @@
             <div class="row">
                 <div class="col-md-12 text-center ">
                     <p>
-                        Представительство компании  «ОТМ» <br>по Красноярскому краю
+                        <?=Yii::t('main','Представительство_компании')?>
+
                     </p>
 
                     <div class="btnch">
-                        <a class="more sweep-to-right text-center" href="#">Посмотреть каталог</a>
+                        <a class="more sweep-to-right text-center" href="#"><?=Yii::t('main','Посмотреть_каталог')?></a>
                     </div>
                 </div>
             </div>

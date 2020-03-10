@@ -208,7 +208,7 @@ $(document).ready(function(){
     $('.statya-carousel').owlCarousel({
         loop:true,
         nav: true,
-        navText: ["<img src='images/left-arrow.png'>","<img src='images/right-arrow.png'>"],
+        navText: ["<img src='/images/left-arrow.png'>","<img src='/images/right-arrow.png'>"],
         dots: true,
         margin:20,
         responsive : {

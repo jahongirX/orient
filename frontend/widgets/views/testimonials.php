@@ -9,9 +9,9 @@
             <?php foreach ($models as $model): ?>
                 <?php
 
-                if($model->image && file_exists(Yii::getAlias('@frontend') . '/web' . Yii::$app->params['uploads_url'] . 'testimonials/' . $model->id . '/l_' . $model->getLang('image') )) {
+                if($model->image && file_exists(Yii::getAlias('@frontend') . '/web' . Yii::$app->params['uploads_url'] . 'testimonials/' . $model->id . '/l_' . $model->image )) {
 
-                    $image = Yii::$app->params['frontend'] . Yii::$app->params['uploads_url'] . 'testimonials/' . $model->id . '/l_' .  $model->getLang('main_image');
+                    $image = Yii::$app->params['frontend'] . Yii::$app->params['uploads_url'] . 'testimonials/' . $model->id . '/l_' .  $model->image;
 
                 }else{
 
@@ -21,7 +21,7 @@
                 ?>
             <div class="item">
                 <div class="kavichki">
-                    <img src="images/feedback-kavichki.png" alt="kavichki">
+                    <img src="/images/feedback-kavichki.png" alt="kavichki">
                 </div>
                 <div class="feedback-info">
 

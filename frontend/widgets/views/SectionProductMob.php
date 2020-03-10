@@ -107,7 +107,7 @@
 
         <div class="row">
             <div class="col-md-12 text-center btnch">
-                <a class="more sweep-to-right text-center" href="#"><?=Yii::t('main','goCatalog')?></a>
+                <a class="more sweep-to-right text-center" href="<?=yii\helpers\Url::to(['product/catalog'])?>"><?=Yii::t('main','goCatalog')?></a>
             </div>
         </div>
     </div>

@@ -2,7 +2,7 @@
 
 namespace common\models;
 
-use common\components\Model;
+use common\components\StaticFunctions;
 use Yii;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
@@ -19,28 +19,28 @@ use yii\db\Expression;
  * @property string $updated_date
  * @property int $status
  */
-class About extends Model
+class About extends \yii\db\ActiveRecord
 {
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => TimestampBehavior::className(),
+                'attributes' => [
+                    ActiveRecord::EVENT_BEFORE_INSERT => ['created_date', 'updated_date'],
+                    ActiveRecord::EVENT_BEFORE_UPDATE => ['updated_date'],
+                ],
+                'value' => new Expression('NOW()'),
+            ],
+        ];
+    }
+
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
         return 'about';
-    }
-
-    public function behaviors()
-    {
-        return [
-            [
-                'class' => TimestampBehavior::className(),
-                'attributes'=>[
-                    ActiveRecord::EVENT_BEFORE_INSERT =>['created_date','updated_date'],
-                    ActiveRecord::EVENT_BEFORE_UPDATE =>['updated_date'],
-                ],
-                'value' => new Expression('NOW()'),
-            ],
-        ];
     }
 
     /**
@@ -71,5 +71,23 @@ class About extends Model
             'updated_date' => 'Updated Date',
             'status' => 'Status',
         ];
+    }
+
+    public function beforeDelete()
+    {
+        $models = NewsLang::find()->filterWhere(['parent' => $this->id])->all();
+
+        foreach($models as $model) {
+
+            StaticFunctions::deleteImage($model->main_image, $model->parent);
+
+            $model->delete();
+        }
+
+        StaticFunctions::deleteImage($this->main_image, $this->id);
+        StaticFunctions::deleteImage($this->secondary_image, $this->id);
+        StaticFunctions::deleteImage($this->icon, $this->id);
+
+        return parent::beforeDelete();
     }
 }

@@ -15,7 +15,7 @@ $this->title = \common\components\StaticFunctions::getSettings('title') . " - " 
                 </p>
 
                 <div class="btnch">
-                    <a class="more sweep-to-right text-center" href="#"><?=Yii::t('main','viewCatalog')?></a>
+                    <a class="more sweep-to-right text-center" href="<?=yii\helpers\Url::to(['product/catalog'])?>"><?=Yii::t('main','viewCatalog')?></a>
                 </div>
             </div>
         </div>

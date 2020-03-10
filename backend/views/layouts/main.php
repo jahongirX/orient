@@ -43,6 +43,9 @@ AppAsset::register($this);
                     $menuItems[] = ['label' => Yii::t('main', 'Index'), 'icon' => 'pg-layouts', 'items' => [
                         ['label' => Yii::t('main', 'Benifites'), 'icon' => 'BF', 'url' => '/benefits/index']
                     ]];
+                    $menuItems[] = ['label' => Yii::t('main', 'About'), 'icon' => 'pg-layouts', 'items' => [
+                        ['label' => Yii::t('main', 'About'), 'icon' => 'Af', 'url' => '/about/index']
+                    ]];
                     $menuItems[] = ['label' => Yii::t('main', 'Newses'), 'icon' => 'pg-layouts', 'items' => [
                         ['label' => Yii::t('main', 'All News'), 'url' => '/news/index', 'icon' => 'NS'],
                         ['label' => Yii::t('main', 'News Categories'), 'url' => '/news-category/index', 'icon' => 'NC']
